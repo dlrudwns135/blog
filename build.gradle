@@ -1,12 +1,13 @@
 buildscript {
     ext {
-        springBootVersion = '2.0.4.RELEASE'
+        springBootVersion = '2.1.5.RELEASE'
     }
     repositories {
         mavenCentral()
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath("io.spring.gradle:dependency-management-plugin:1.0.4.RELEASE")
     }
 }
 
@@ -17,22 +18,25 @@ apply plugin: 'io.spring.dependency-management'
 
 group = 'com.tutorial'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = 10
+sourceCompatibility = 8
 
 repositories {
     mavenCentral()
 }
 
+ext['hibernate.version'] = '5.2.11.Final'
 
 dependencies {
+    compile('org.springframework.boot:spring-boot-starter-jdbc')
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
-//    compile('org.springframework.boot:spring-boot-starter-security')
+    compile('org.springframework.boot:spring-boot-starter-security')
     compile('org.springframework.boot:spring-boot-starter-web')
     compile('org.springframework.session:spring-session-core')
-//    compile('org.springframework.boot:spring-boot-starter-actuator')
+    compile('org.mariadb.jdbc:mariadb-java-client')
+    compile('org.springframework.boot:spring-boot-starter-actuator')
     runtime('com.h2database:h2')
     compileOnly('org.projectlombok:lombok')
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile('org.springframework.restdocs:spring-restdocs-mockmvc')
-//    testCompile('org.springframework.security:spring-security-test')
+    testCompile('org.springframework.security:spring-security-test')
 }

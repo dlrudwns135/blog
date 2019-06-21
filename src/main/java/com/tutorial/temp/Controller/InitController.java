@@ -1,9 +1,10 @@
 package com.tutorial.temp.Controller;
 
+import com.tutorial.temp.Class.User;
+import com.tutorial.temp.DTO.UserDTO;
+import com.tutorial.temp.Repository.UserRepository;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * ${file_name}기능명
@@ -15,12 +16,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 //@Controller("InitController")
 @RestController
-//@RequestMapping("/test")
 public class InitController {
 
-//    @RequestMapping("/hello")
-    @GetMapping("/hello")
+    private UserRepository userRepository;
+
+    @RequestMapping(value = "/hello",method = RequestMethod.GET)
     public String hello(){
         return "hello";
+    }
+
+    @RequestMapping(value="/save", method= RequestMethod.POST)
+    public void save(@RequestBody UserDTO userDto){
+        userRepository.save(userDto.toEntity());
     }
 }

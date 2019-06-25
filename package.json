@@ -1,0 +1,27 @@
+{
+  "name": "boot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.renilserver.synology.me/renil/boot.git"
+  },
+  "author": "leekj",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "bable-loader": "0.0.1-security",
+    "css-loader": "^3.0.0",
+    "file-loader": "^4.0.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^2.0.0",
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.5",
+    "webpack-dev-server": "^3.7.2"
+  }
+}

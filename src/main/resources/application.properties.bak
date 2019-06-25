@@ -1,0 +1,9 @@
+spring.datasource.url=jdbc:mariadb://renilserver.synology.me:23306/blog
+#spring.datasource.url=jdbc:h2:mem:testdb
+spring.jpa.hibernate.ddl-auto=update
+
+spring.datasource.username=server
+spring.datasource.password=server2019
+spring.datasource.driver-class-name=org.mariadb.jdbc.Driver
+
+spring.h2.console.enabled=true

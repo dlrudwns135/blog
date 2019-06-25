@@ -1,0 +1,12 @@
+
+> templates@1.0.0 start D:\intellij\boot\templates
+> npm run dev
+
+
+> templates@1.0.0 dev D:\intellij\boot\templates
+> webpack-dev-server --inline --progress --config build/webpack.dev.conf.js
+
+ DONE  Compiled successfully in 7471ms2:30:25 PM
+
+ I  Your application is running here: http://localhost:8081
+일괄 작업을 끝내시겠습니까 (Y/N)? 

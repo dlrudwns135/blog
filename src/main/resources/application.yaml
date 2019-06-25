@@ -2,3 +2,22 @@ spring:
   h2:
     console:
       enabled:true
+  datasource:
+    url: jdbc:mariadb://renilserver.synology.me:23306/blog
+    username: server
+    password: server2019
+    driver-class-name: org.mariadb.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+logging:
+  level:
+    root: INFO
+    org:
+      springframework:
+        web: DEBUG
+        security: ERROR
+      apache:
+        commons:
+          dbcp2:INFO

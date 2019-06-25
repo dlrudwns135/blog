@@ -3,6 +3,8 @@ package com.tutorial.temp.Controller;
 import com.tutorial.temp.Class.User;
 import com.tutorial.temp.DTO.UserDTO;
 import com.tutorial.temp.Repository.UserRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,6 +19,7 @@ import org.springframework.web.bind.annotation.*;
 //@Controller("InitController")
 @RestController
 public class InitController {
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     private UserRepository userRepository;
 
